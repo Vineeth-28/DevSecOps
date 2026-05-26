@@ -27,8 +27,12 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Run Prettier Check
+      - name: Format with Prettier
+        run: npx prettier --write .
+
+      - name: Check formatting
         run: npm run format:check
+
 
       - name: Run npm audit
         run: npm audit --audit-level=high

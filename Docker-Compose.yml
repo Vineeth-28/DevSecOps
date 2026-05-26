@@ -1,4 +1,3 @@
-
 services:
   portfolio-app:
     build: .

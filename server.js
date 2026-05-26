@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/health", (req, res) => {
   res.status(200).json({
     status: "healthy",
-    service: "portfolio-app"
+    service: "portfolio-app",
   });
 });
 
@@ -21,13 +21,7 @@ app.get("/api/profile", (req, res) => {
   res.json({
     name: "Vineet",
     role: "Software Engineer",
-    skills: [
-      "JavaScript",
-      "Docker",
-      "AWS",
-      "DevSecOps",
-      "CI/CD"
-    ]
+    skills: ["JavaScript", "Docker", "AWS", "DevSecOps", "CI/CD"],
   });
 });
 
