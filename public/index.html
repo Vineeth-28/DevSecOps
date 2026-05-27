@@ -1,40 +1,489 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vineet Portfolio</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Vineet</h1>
-      <p>Software Engineer | DevSecOps Learner</p>
-    </header>
+<head>
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        Passionate backend engineer learning Docker, Kubernetes, CI/CD and
-        DevSecOps.
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Vineet | Senior DevOps Engineer</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- GSAP -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- ScrollTrigger -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Background -->
+
+  <canvas id="bg"></canvas>
+
+  <!-- Navbar -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Vineet<span>.</span>
+    </div>
+
+    <ul class="nav-links">
+
+      <li><a href="#about">About</a></li>
+
+      <li><a href="#skills">Skills</a></li>
+
+      <li><a href="#experience">Experience</a></li>
+
+      <li><a href="#projects">Projects</a></li>
+
+      <li><a href="#certifications">Certifications</a></li>
+
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <p class="hero-tag">
+        DEVOPS • CLOUD • DEVSECOPS
       </p>
-    </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
+      <h1 class="hero-title">
+        Senior DevOps Engineer
+      </h1>
 
-      <div class="card-container">
-        <div class="card">Docker</div>
-        <div class="card">AWS</div>
-        <div class="card">Node.js</div>
-        <div class="card">CI/CD</div>
-        <div class="card">Linux</div>
+      <h2 class="typing-text"></h2>
+
+      <p class="hero-description">
+
+        Designing scalable cloud infrastructure, secure CI/CD pipelines,
+        Kubernetes platforms and automated DevSecOps workflows
+        for modern production systems.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#projects"
+          class="btn primary-btn"
+        >
+          View Projects
+        </a>
+
+        <a
+          href="#contact"
+          class="btn secondary-btn"
+        >
+          Contact Me
+        </a>
+
       </div>
-    </section>
 
-    <footer>
-      <p>© 2026 Vineet Portfolio</p>
-    </footer>
-  </body>
+    </div>
+
+  </section>
+
+  <!-- Dashboard Metrics -->
+
+  <section class="dashboard">
+
+    <div class="metric-card">
+
+      <h2 class="deployments">0+</h2>
+
+      <p>Deployments Automated</p>
+
+    </div>
+
+    <div class="metric-card">
+
+      <h2 class="uptime">0%</h2>
+
+      <p>Infrastructure Uptime</p>
+
+    </div>
+
+    <div class="metric-card">
+
+      <h2 class="requests">0M+</h2>
+
+      <p>Requests / Day</p>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+
+  <section
+    id="about"
+    class="about section"
+  >
+
+    <h2 class="section-title">
+      About Me
+    </h2>
+
+    <div class="about-container">
+
+      <div class="glass-card">
+
+        <p>
+
+          Experienced DevOps Engineer with 5 years of hands-on expertise
+          building highly scalable cloud infrastructure and production-grade
+          CI/CD systems across AWS environments.
+
+        </p>
+
+        <p>
+
+          Specialized in Kubernetes orchestration, Infrastructure as Code,
+          monitoring, automation and DevSecOps practices focused on reliability,
+          scalability and security.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+
+  <section
+    id="skills"
+    class="skills section"
+  >
+
+    <h2 class="section-title">
+      Technical Skills
+    </h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-cloud"></i>
+
+        <h3>Cloud Platforms</h3>
+
+        <p>
+          AWS, Azure, GCP, EC2, EKS, Lambda, S3, IAM
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-brands fa-docker"></i>
+
+        <h3>Containers</h3>
+
+        <p>
+          Docker, Kubernetes, Helm, Container Security
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-code-branch"></i>
+
+        <h3>CI/CD</h3>
+
+        <p>
+          GitHub Actions, Jenkins, GitLab CI, ArgoCD
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-server"></i>
+
+        <h3>Infrastructure as Code</h3>
+
+        <p>
+          Terraform, Ansible, CloudFormation
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>Monitoring</h3>
+
+        <p>
+          Prometheus, Grafana, ELK Stack, Datadog
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>Security</h3>
+
+        <p>
+          Trivy, Vault, SAST/DAST, IAM Policies
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Experience -->
+
+  <section
+    id="experience"
+    class="experience section"
+  >
+
+    <h2 class="section-title">
+      Experience Highlights
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <h3>
+          Reduced deployment time by 70%
+        </h3>
+
+        <p>
+          Built automated CI/CD pipelines using Jenkins, GitHub Actions
+          and ArgoCD.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>
+          Managed Kubernetes clusters serving 10M+ requests/day
+        </h3>
+
+        <p>
+          Designed scalable Kubernetes infrastructure with Helm
+          and production monitoring.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>
+          Improved reliability to 99.99% uptime
+        </h3>
+
+        <p>
+          Implemented monitoring, observability and automated recovery systems.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>
+          Implemented enterprise DevSecOps workflows
+        </h3>
+
+        <p>
+          Integrated vulnerability scanning, secret detection and IAM security.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
+  <section
+    id="projects"
+    class="projects section"
+  >
+
+    <h2 class="section-title">
+      Featured Projects
+    </h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+
+        <h3>
+          Self-Healing Kubernetes Infrastructure
+        </h3>
+
+        <p>
+          Built automated Kubernetes recovery workflows using monitoring,
+          scaling and custom operators.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>
+          Enterprise CI/CD Platform
+        </h3>
+
+        <p>
+          Designed secure DevSecOps pipelines integrating GitHub Actions,
+          Terraform and Docker security scanning.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>
+          AWS Cost Optimization System
+        </h3>
+
+        <p>
+          Reduced infrastructure costs by 35% using Lambda automation
+          and Terraform optimization.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certifications -->
+
+  <section
+    id="certifications"
+    class="certifications section"
+  >
+
+    <h2 class="section-title">
+      Certifications
+    </h2>
+
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        AWS Solutions Architect
+      </div>
+
+      <div class="cert-card">
+        Certified Kubernetes Administrator
+      </div>
+
+      <div class="cert-card">
+        Terraform Associate
+      </div>
+
+      <div class="cert-card">
+        Docker Certified Associate
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section
+    id="contact"
+    class="contact section"
+  >
+
+    <h2 class="section-title">
+      Contact
+    </h2>
+
+    <div class="contact-links">
+
+      <a href="#">
+        <i class="fa-brands fa-linkedin"></i>
+        LinkedIn
+      </a>
+
+      <a href="#">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+      </a>
+
+      <a href="#">
+        <i class="fa-solid fa-envelope"></i>
+        vineet@example.com
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>
+      © 2026 Vineet | Senior DevOps Engineer
+    </p>
+
+  </footer>
+
+  <!-- Scripts -->
+
+  <script src="./js/three-background.js"></script>
+
+  <script src="./js/gsap-animations.js"></script>
+
+  <script src="./js/dashboard.js"></script>
+
+  <script src="./js/particles.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>

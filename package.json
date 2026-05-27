@@ -1,7 +1,7 @@
 {
   "name": "portfolio-app",
   "version": "1.0.0",
-  "description": "Simple portfolio app for DevSecOps practice",
+  "description": "Modern DevSecOps portfolio with Three.js and GSAP",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -14,20 +14,21 @@
     "portfolio",
     "devsecops",
     "docker",
-    "nodejs"
+    "nodejs",
+    "threejs",
+    "gsap"
   ],
   "author": "Vineet",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
-    "gitleaks": "^1.0.0"
+    "gsap": "^3.12.5",
+    "i": "^0.3.7",
+    "three": "^0.164.1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.4.0",
-    "globals": "^17.6.0",
+    "eslint": "^8.57.0",
     "nodemon": "^3.1.0",
-    "prettier": "^3.8.3",
-     "gitleaks": "^1.0.0"
+    "prettier": "^3.3.2"
   }
 }
