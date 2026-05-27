@@ -15,6 +15,9 @@ module.exports = [
         console: "readonly",
         gsap: "readonly",
         document: "readonly",
+        THREE: "readonly",
+        setinterval: "readonly",
+        
       },
     },
     rules: {
