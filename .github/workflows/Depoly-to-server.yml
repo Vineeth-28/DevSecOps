@@ -1,4 +1,4 @@
-name: Deploy to AWS Server
+name: Deploy to AWS EC2
 
 on:
   workflow_dispatch:
@@ -25,16 +25,14 @@ jobs:
           port: 22
 
           script: |
-            cd /home/ubuntu/devsecops-portfolio
+            cd /home/ubuntu/DevSecOps
 
             git pull origin main
 
-            docker compose down
+            sudo docker compose down
+            sudo docker compose build
+            sudo docker compose up -d
 
-            docker compose build
+            sudo docker image prune -f
 
-            docker compose up -d
-
-            docker image prune -f
-
-            docker ps
+            sudo docker ps
