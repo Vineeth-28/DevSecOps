@@ -1,29 +1,127 @@
 // eslint.config.js
+
 const js = require("@eslint/js");
 
 module.exports = [
   js.configs.recommended,
+
   {
+    files: ["**/*.js"],
+
     languageOptions: {
+      ecmaVersion: "latest",
+
+      sourceType: "script",
+
       globals: {
+        //////////////////////////////////////////////////
+        // NODE
+        //////////////////////////////////////////////////
+
         require: "readonly",
         module: "readonly",
         exports: "readonly",
         __dirname: "readonly",
         __filename: "readonly",
         process: "readonly",
-        console: "readonly",
-        gsap: "readonly",
-        document: "readonly",
-        THREE: "readonly",
-        setinterval: "readonly",
-        window: "readonly",
 
+        //////////////////////////////////////////////////
+        // BROWSER
+        //////////////////////////////////////////////////
+
+        window: "readonly",
+        document: "readonly",
+        navigator: "readonly",
+        localStorage: "readonly",
+
+        //////////////////////////////////////////////////
+        // TIMERS
+        //////////////////////////////////////////////////
+
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+
+        setInterval: "readonly",
+        clearInterval: "readonly",
+
+        requestAnimationFrame: "readonly",
+        cancelAnimationFrame: "readonly",
+
+        //////////////////////////////////////////////////
+        // CONSOLE
+        //////////////////////////////////////////////////
+
+        console: "readonly",
+
+        //////////////////////////////////////////////////
+        // THREE JS
+        //////////////////////////////////////////////////
+
+        THREE: "readonly",
+
+        //////////////////////////////////////////////////
+        // GSAP
+        //////////////////////////////////////////////////
+
+        gsap: "readonly",
+        ScrollTrigger: "readonly",
+
+        //////////////////////////////////////////////////
+        // WEB APIs
+        //////////////////////////////////////////////////
+
+        fetch: "readonly",
+        URL: "readonly",
+        Image: "readonly",
+
+        //////////////////////////////////////////////////
+        // EVENTS
+        //////////////////////////////////////////////////
+
+        addEventListener: "readonly",
+        removeEventListener: "readonly",
       },
     },
+
     rules: {
-      "no-unused-vars": "warn",
+      //////////////////////////////////////////////////
+      // GENERAL
+      //////////////////////////////////////////////////
+
+      "no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+        },
+      ],
+
       "no-console": "off",
+
+      //////////////////////////////////////////////////
+      // CLEAN CODE
+      //////////////////////////////////////////////////
+
+      eqeqeq: "error",
+
+      curly: "error",
+
+      semi: ["error", "always"],
+
+      quotes: ["error", "double"],
+
+      //////////////////////////////////////////////////
+      // BEST PRACTICES
+      //////////////////////////////////////////////////
+
+      "no-var": "error",
+
+      "prefer-const": "warn",
+
+      //////////////////////////////////////////////////
+      // ALLOW DEVOPS STYLE
+      //////////////////////////////////////////////////
+
+      "no-undef": "error",
     },
   },
 ];
