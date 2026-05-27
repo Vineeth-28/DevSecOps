@@ -1,2 +1,40 @@
-name: Deploy  to server 
- 
+name: Deploy to AWS Server
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to AWS EC2
+        uses: appleboy/ssh-action@v1.0.3
+
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+
+          script: |
+            cd /home/ubuntu/devsecops-portfolio
+
+            git pull origin main
+
+            docker compose down
+
+            docker compose build
+
+            docker compose up -d
+
+            docker image prune -f
+
+            docker ps
