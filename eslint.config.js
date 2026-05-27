@@ -17,7 +17,8 @@ module.exports = [
         document: "readonly",
         THREE: "readonly",
         setinterval: "readonly",
-        
+        window: "readonly",
+
       },
     },
     rules: {
