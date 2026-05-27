@@ -13,6 +13,8 @@ module.exports = [
         __filename: "readonly",
         process: "readonly",
         console: "readonly",
+        gsap: "readonly",
+        document: "readonly",
       },
     },
     rules: {
