@@ -22,3 +22,4 @@ jobs:
   deploy:
     needs: docker-lint
     uses: ./.github/workflows/Deploy.yml
+
