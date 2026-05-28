@@ -1,7 +1,8 @@
 name: Developer Security Operations End-to-End Workflow
 
 on:
-  workflow_call:
+  workflow_dispatch:
+
 jobs:
   code-quality:
     uses: ./.github/workflows/Code-Quality.yml
