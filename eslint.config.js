@@ -47,6 +47,7 @@ module.exports = [
 
         addEventListener: "readonly",
         removeEventListener: "readonly",
+        window: "readonly",
       },
     },
 
