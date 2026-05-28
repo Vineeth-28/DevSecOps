@@ -1,0 +1,28 @@
+name: Developer Security Operations End-to-End Workflow
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  code-quality:
+    uses: ./.github/workflows/Code-Quality.yml
+
+  secrets-scan:
+    needs: code-quality
+    uses: ./.github/workflows/Secrets-Scan.yml
+
+  dependency-scan:
+    needs: secrets-scan
+    uses: ./.github/workflows/Dependency-Scan.yml
+
+  docker-lint:
+    needs: dependency-scan
+    uses: ./.github/workflows/Docker-Lint.yml
+
+  deploy:
+    needs: docker-lint
+    uses: ./.github/workflows/Deploy.yml
